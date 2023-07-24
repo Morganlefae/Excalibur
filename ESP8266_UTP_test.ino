@@ -60,6 +60,7 @@ void loop() {
     Udp.beginPacket(ComputerIP, 3002);  // 向UE4工程所在的电脑的 3002端口 发数据
     Udp.write("finished");
     Udp.endPacket();  // 发送数据结束
+    transmit_count = 0; //收剑
   }
 
   if (lux < 20 && transmit_count <= 5) { //收剑 防止快速抽插
